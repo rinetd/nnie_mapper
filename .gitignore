@@ -131,3 +131,4 @@ dmypy.json
 *.weights
 *.caffemodel
 *.wk
+data/caffemodel

@@ -1,6 +1,6 @@
 # The caffe module needs to be on the Python path;
 #  we'll add it here explicitly.
-# caffe_root='/home/ss/caffe/'
+caffe_root='/home/ubuntu/caffe/models/twmht_caffe/distribute/'
 #os.chdir(caffe_root)
 import sys
 sys.path.insert(0,caffe_root+'python')
