@@ -164,14 +164,12 @@ def save_prototxt(net_info, protofile, region=True):
     layers = net_info['layers']
     print >> fp, 'name: \"%s\"' % props['name']
     print >> fp, 'input: \"%s\"' % props['input']
-
     print >> fp, 'input_shape {'
-    print >> fp, '  dim: %s' % props['input_dim'][0]
-    print >> fp, '  dim: %s' % props['input_dim'][1]
-    print >> fp, '  dim: %s' % props['input_dim'][2]
-    print >> fp, '  dim: %s' % props['input_dim'][3]
+    print >> fp, '	dim: %s' % props['input_dim'][0]
+    print >> fp, '	dim: %s' % props['input_dim'][1]
+    print >> fp, '	dim: %s' % props['input_dim'][2]
+    print >> fp, '	dim: %s' % props['input_dim'][3]
     print >> fp, '}'
-    print >> fp, ''
     for layer in layers:
         if layer['type'] != 'Region' or region == True:
             print_block(layer, 'layer', 0)

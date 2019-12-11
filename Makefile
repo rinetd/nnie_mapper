@@ -1,4 +1,4 @@
-.PHONY: mapper
+.PHONY: all darknet2caffe mapper
 YOYO?=yolov3-drone
 YOLOV3_WEIGHTS?=yolov3-voc.weights
 
