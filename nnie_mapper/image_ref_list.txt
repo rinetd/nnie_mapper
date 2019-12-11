@@ -1,0 +1,2 @@
+./data/images/dog_bike_car.jpg
+./data/images/person.jpg
