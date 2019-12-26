@@ -1,10 +1,11 @@
-name: "Darkent2Caffe"
+name: "yolov3"
 input: "data"
-input_dim: 6
-input_dim: 3
-input_dim: 416
-input_dim: 416
-
+input_shape {
+	dim: 1
+	dim: 3
+	dim: 416
+	dim: 416
+}
 layer {
     bottom: "data"
     top: "layer1-conv"
@@ -2561,7 +2562,7 @@ layer {
     name: "layer82-conv"
     type: "Convolution"
     convolution_param {
-        num_output: 255
+        num_output: 24
         kernel_size: 1
         pad: 0
         stride: 1
@@ -2876,7 +2877,7 @@ layer {
     name: "layer94-conv"
     type: "Convolution"
     convolution_param {
-        num_output: 255
+        num_output: 24
         kernel_size: 1
         pad: 0
         stride: 1
@@ -3191,19 +3192,10 @@ layer {
     name: "layer106-conv"
     type: "Convolution"
     convolution_param {
-        num_output: 255
+        num_output: 24
         kernel_size: 1
         pad: 0
         stride: 1
         bias_term: true
     }
-}
-
-layer {
-    bottom: "layer82-conv"
-    bottom: "layer94-conv"
-    bottom: "layer106-conv"
-    top: "yolo-det"
-    name: "yolo-det"
-    type: "Yolo"
 }

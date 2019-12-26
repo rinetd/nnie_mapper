@@ -1,10 +1,11 @@
 name: "Darkent2Caffe"
 input: "data"
-input_dim: 6
-input_dim: 3
-input_dim: 416
-input_dim: 416
-
+input_shape {
+	dim: 1
+	dim: 3
+	dim: 608
+	dim: 608
+}
 layer {
     bottom: "data"
     top: "layer1-conv"
@@ -3197,13 +3198,4 @@ layer {
         stride: 1
         bias_term: true
     }
-}
-
-layer {
-    bottom: "layer82-conv"
-    bottom: "layer94-conv"
-    bottom: "layer106-conv"
-    top: "yolo-det"
-    name: "yolo-det"
-    type: "Yolo"
 }

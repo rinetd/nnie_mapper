@@ -113,7 +113,8 @@ def JPG2BGR(imgpath,saveimg,save_img_size = 416):
 
 def showreact(imgpath):
     if imgpath is None:
-        imgpath='img/niaochao_416_416.jpg'
+        # imgpath='img/niaochao_416_416.jpg'
+        imgpath='img/dog_bike_car_416x416.jpg'
     save_img_size=416
     img = cv2.imread(imgpath)
     img = cv2.resize(img,(save_img_size,save_img_size))
@@ -142,7 +143,15 @@ def showreact(imgpath):
 # 128 230 230 359
 # 134 231 229 362  interpolation=cv2.INTER_AREA
 # 128 229 230 360
-    w,h=((128,229),(230,360))  ## niaochao
+
+# 216 133 307 234 0.951904
+# 1 118 226 246 304 0.856201 niaochao
+    # w,h=((128,229),(230,360))  ## niaochao
+    # w,h=((128,229),(230,360))  ## niaochao
+    # w,h=((216,133),(307,234))  ## niaochao
+
+    # (123,87),(416,265)
+    w,h=((123,87),(416,265))  ## niaochao
     img = cv2.rectangle(img, w,h, (255, 0, 0), 2)
     
 # ==============================================================================
@@ -176,8 +185,8 @@ def showreact(imgpath):
 
 if __name__ == "__main__":
     
-    showreact("data/images/niaochao.jpg")
-    JPG2BGR("data/images/niaochao.jpg","img/dog_bike_car_416x416.bgr")
+    showreact("img/dog_bike_car_416x416.jpg")
+    # JPG2BGR("data/images/niaochao.jpg","img/dog_bike_car_416x416.bgr")
     # if len(sys.argv) < 3:
     #     print("python convert.py data/images/jueyuanzi.jpg jueyuanzi.bgr")
     # src=sys.argv[1]

@@ -74,4 +74,13 @@ darknet2caffe cfg/yolov3.cfg weights/yolov3.weights prototxt/yolov3.prototxt caf
 
 
 
+os.environ['PYTHONPATH']=' caffe/python:'
+os.environ['LD_LIBRARY_PATH']='caffe/.build_release/lib:$LD_LIBRARY_PATH:'
+
+
+
+### caffe 运行环境
+
+pip install scikit-image==0.10 scipy
+
 
